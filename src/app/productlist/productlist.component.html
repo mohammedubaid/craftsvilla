@@ -1,0 +1,30 @@
+<div class="col-xs-12 products-section feed-products-section" id="main">
+	<div class="center-product">
+		<div class="col-xs-6 col-md-3 width20p product mob_padding" *ngFor="let product of products">
+			<div class="product-image-container">
+				<a title="" (click)="onSelect(product)">
+					<img alt="" class="product-image" src="http://img1.craftsvilla.com/thumb/216x216{{product.imgUrl}}">
+				 </a>
+		 	</div>
+		    <div class="product-details-container col-xs-12">
+				<div class="product-name">
+					<a title="{{product.productName}}" (click)="onSelect(product)">
+						{{product.productName | truncateString : 20}}
+					</a>
+				</div>
+				<div class="price-container col-xs-12 nopadding"><div class="col-xs-6 col-md-6 col-lg-4 discounted-price n-price-fs nopadding">
+					Rs. {{product.discountedPrice}}
+				</div>
+				<div class="col-xs-6 col-md-6 col-lg-4 original-price n-price-fs nopadding hidden-xs hidden-sm hidden-md">
+					<s>{{product.regularPrice}}</s>
+				</div>
+				<div class="col-xs-6 col-md-6 col-lg-4 save-percent nopadding">
+					Save {{product.discountPercentage}}%
+				</div>
+			</div>
+		</div>
+		<div class="wishit" onclick="">
+			<div class="wishitIcon"><i class="icon-small icon-wish" id="wishicon-3566887"></i></div>
+		</div>
+	</div>
+</div>
